@@ -2,33 +2,33 @@ describe("NoteApplication test", function() {
   var noteApp;
 
   beforeEach(function() {
-    noteApp = new note("Richard Ekong");
+    noteApp = new NoteApplication("Richard Ekong");
   });
 
   it("should have an author named Richard Ekong", function() {
-    expect(noteApp.author).toEqual("Richard Ekong");
+      expect(noteApp.author).toEqual("Richard Ekong");
   });
 
   it("should have a notes list of type array", function() {
-    expect(Array.isArray(noteApp.noteList)).toBeTruthy();
+      expect(Array.isArray(noteApp.noteList)).toBeTruthy();
   })
 
   it("should have a create function", function() {
-    expect(typeof noteApp.create === 'function').toBeTruthy();
+      expect(typeof noteApp.create === 'function').toBeTruthy();
   });
 
   it("should be able to make a note", function() {
-    var note_content = "I Love What I Do";
-    noteApp.create(note_content);
-    expect(noteApp.noteList).toContain(note_content);
+      var note_content = "I Love What I Do";
+      noteApp.create(note_content);
+      expect(noteApp.noteList).toContain(note_content);
   });
 
   it("should have a listNote function", function() {
-    expect(typeof noteApp.listNote === 'function').toBeTruthy();
+      expect(typeof noteApp.listNote === 'function').toBeTruthy();
   });
 
   it("should have a get function", function() {
-    expect(typeof noteApp.get === 'function').toBeTruthy();
+      expect(typeof noteApp.get === 'function').toBeTruthy();
   });
 
   it("should be able to return a note", function() {

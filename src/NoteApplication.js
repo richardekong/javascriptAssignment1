@@ -3,7 +3,7 @@
 
 
  
-function note(author)
+function NoteApplication(author)
 {
 	
 	this.author=author;
@@ -60,7 +60,7 @@ this.edit=function(note_id, new_content)
 }
 }
 
-/**var myNote=new note("Richard Ekong");
+/**var myNote=new NoteApplication("Richard Ekong");
 myNote.create("I love what I do");
 myNote.create("Commercial Law");
 myNote.create("World at war")
